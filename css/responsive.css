@@ -46,7 +46,7 @@
         margin: 2em 0;
         border-radius: 0;
         border-top: 5px solid transparent;
-        border-image: url(/imagenes/border-footer.jpg) 30 round;
+        border-image: url(/imagenes/border-footer.webp) 30 round;
     }
 
     .contact-form-section .btn {

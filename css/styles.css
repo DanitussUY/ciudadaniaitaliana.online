@@ -16,7 +16,7 @@
     clip-path: polygon(50% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
     background-color: var(--text-color);
     border-top: 5px solid transparent; /* Define el tamaño del borde */
-    border-image: url('/imagenes/border-footer.jpg') 30 round; /* Ruta de la imagen, ancho de las secciones y modo de ajuste */
+    border-image: url('/imagenes/border-footer.webp') 30 round; /* Ruta de la imagen, ancho de las secciones y modo de ajuste */
 }
 
 /* Contenido */

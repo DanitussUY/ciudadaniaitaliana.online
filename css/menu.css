@@ -15,7 +15,7 @@
     justify-content: center;
     z-index: 1000; /* Asegura que el menú esté sobre otros elementos */
     border-top: 5px solid transparent; /* Define el tamaño del borde */
-    border-image: url('/imagenes/border-footer.jpg') 30 round; /* Ruta de la imagen, ancho de las secciones y modo de ajuste */
+    border-image: url('/imagenes/border-footer.webp') 30 round; /* Ruta de la imagen, ancho de las secciones y modo de ajuste */
 }
 
 .menu[aria-expanded="true"] {
@@ -51,7 +51,7 @@
     display: block;
     background-color: #fff;
     transition: all 0.3s ease;
-    background-image: url(/imagenes/border-footer.jpg);
+    background-image: url(/imagenes/border-footer.webp);
     background-position-x: 128px;
 }
 
