@@ -163,7 +163,7 @@ footer {
 .footer-section h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    border-bottom: 2px solid #ffffff; /* Línea debajo del título */
+    border-bottom: 5px solid #ffffff; /* Línea debajo del título */
     padding-bottom: 5px;
 }
 
