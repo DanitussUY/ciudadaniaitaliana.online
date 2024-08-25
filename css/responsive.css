@@ -1,0 +1,51 @@
+/* responsive.css */
+@media (min-width: 1024px) {
+    .content-section {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .content-section.inverse {
+        flex-direction: row-reverse;
+    }
+
+    .section-image,
+    .section-content {
+        width: 50%;
+    }
+    main {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    .hero {
+        height: 100dvh; /* Adjust for 1024px layout */
+    }
+}
+
+@media (max-width: 1024px) {
+    main {
+        padding: 0;
+    }
+
+    .h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .footer-container {
+        flex-direction: column; /* Apila las secciones verticalmente */
+    }
+    .comment-avatar img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .comments-section {
+        padding: 2em;
+        background-color: var(--comment-color);
+        margin: 2em 0;
+        border-radius: 0;
+        border-top: 5px solid transparent;
+        border-image: url(/imagenes/border-footer.jpg) 30 round;
+    }
+}

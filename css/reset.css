@@ -1,0 +1,46 @@
+/* reset.css */
+/* Restablecer el margen y el padding de todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Establecer fuente y tamaño de texto predeterminados */
+body {
+    font-family: sans-serif;
+    font-size: 100%;
+}
+/* Eliminar el estilo de lista por defecto */
+ul, ol {
+    list-style: none;
+}
+/* Quitar subrayado de los enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* Configurar la tabla para que se ajuste al contenido */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* Eliminar los bordes de los campos de formulario por defecto */
+input, button, textarea, select {
+    border: none;
+    outline: none;
+}
+/* Establecer la altura del botón para que se ajuste al texto */
+button {
+    background: none;
+    cursor: pointer;
+}
+/* Configurar el comportamiento de las imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/* Asegurar que los elementos de bloque ocupen toda la anchura disponible */
+header, footer, main, section, article, div, p, h1, h2, h3, h4, h5, h6 {
+    display: block;
+}

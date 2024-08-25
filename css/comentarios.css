@@ -1,0 +1,63 @@
+.comments-section {
+    padding: 2em;
+    background-color: var(--comment-color);
+    margin: 0 1em 5em 1em;
+    border-radius: 0.25em;
+    border-top: 5px solid transparent; /* Define el tamaño del borde */
+    border-image: url('/imagenes/border-footer.jpg') 30 round; /* Ruta de la imagen, ancho de las secciones y modo de ajuste */
+}
+/* Estilos para la sección de comentarios */
+.comments-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+/* Comentario */
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.comment-avatar {
+    margin-right: 15px;
+}
+
+.comment-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.comment-content {
+    padding: 10px 15px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.comment-header {
+    margin-bottom: 5px;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Respuesta al comentario */
+.comment.reply {
+    margin-left: 65px;
+    margin-top: -15px;
+    border-left: 3px solid var(--primary-color);
+    padding-left: 15px;
+}
+
+.comment-header {
+    margin-bottom: 5px;
+    background-color: transparent;
+    color: var(--primary-color);
+}

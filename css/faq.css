@@ -1,0 +1,53 @@
+.hero {
+    background-image: url(../imagenes/header-home-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position-y: 10dvh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-attachment: fixed; /* Añade el efecto parallax */
+    position: relative; /* Para que el pseudo-elemento se posicione correctamente */
+    align-items: center;
+}
+
+.accordion-checkbox {
+    display: none;
+}
+
+.accordion-button {
+    background-color: #1A237E;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    text-align: left;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-bottom: 5px; /* Espacio entre las FAQ */
+}
+
+.accordion-button:hover {
+    background-color: #303F9F;
+}
+
+.accordion-content {
+    display: none;
+    overflow: hidden;
+    padding: 0 15px;
+    background-color: #f1f1f1;
+    margin-bottom: 10px; /* Espacio debajo del contenido */
+}
+
+.accordion-content p {
+    margin: 15px 0;
+}
+
+.accordion-checkbox:checked + .accordion-button + .accordion-content {
+    display: block;
+}
