@@ -40,10 +40,6 @@ nav {
 }
 
 .hero {
-    background-image: url(../imagenes/header-home.webp);
-    background-size: cover;
-    background-position: center;
-    background-position-y: 10dvh;
     height: 100dvh;
     display: flex;
     flex-direction: column;
