@@ -1,9 +1,7 @@
 // menu.js
-
 document.addEventListener('DOMContentLoaded', function () {
     const menuIcon = document.querySelector('.menu-icon');
     const menu = document.querySelector('.menu');
-
     // Maneja el clic en el icono del menú
     menuIcon.addEventListener('click', function () {
         const isExpanded = menuIcon.getAttribute('aria-expanded') === 'true';

@@ -1,4 +1,19 @@
 /* styles.css */
+.hero {
+    background-image: url(../imagenes/header-home.webp);
+    background-size: cover;
+    background-position: center;
+    background-position-y: 10dvh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-attachment: fixed; /* Añade el efecto parallax */
+    position: relative; /* Para que el pseudo-elemento se posicione correctamente */
+    align-items: center;
+}
 
 /* Estilos generales para content-section */
 .content-section {

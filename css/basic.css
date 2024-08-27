@@ -4,6 +4,7 @@
     --secondary-color: #0066cc;
     --comment-color:#f3f2ff;
     --text-color: #333;
+    --text-color-light: #fff;
     --background-color: #fff;
     --font-family: Arial, sans-serif;
     --font-size: 16px;
@@ -18,7 +19,7 @@ body {
 
 header {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--background-color);
 }
 
 nav {
@@ -71,7 +72,7 @@ nav {
 .hero-content {
     position: relative; /* Asegura que el contenido esté encima del overlay */
     z-index: 2; /* Asegura que el contenido esté encima del overlay */
-    color: #fff; /* Color del texto para contraste */
+    color: var(--text-color-light); /* Color del texto para contraste */
     padding: 1em;
     margin-top: 5em;
 }
@@ -135,8 +136,8 @@ h2 {
 /* Estilos generales del footer */
 /* Estilos generales del footer */
 footer {
-    background-color: #1A237E; /* Color de fondo */
-    color: #ffffff; /* Color de texto */
+    background-color: var(--primary-color); /* Color de fondo */
+    color: var(--text-color-light); /* Color de texto */
     padding: 20px 0;
     border-top: 5px solid transparent; /* Define el tamaño del borde */
     border-image: url('/imagenes/border-footer.webp') 30 round; /* Ruta de la imagen, ancho de las secciones y modo de ajuste */
@@ -159,7 +160,7 @@ footer {
 .footer-section h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    border-bottom: 5px solid #ffffff; /* Línea debajo del título */
+    border-bottom: 5px solid var(--text-color-light); /* Línea debajo del título */
     padding-bottom: 5px;
 }
 
@@ -169,7 +170,7 @@ footer {
 }
 
 .footer-section a {
-    color: #ffecb4; /* Color de los enlaces */
+    color: var(--comment-color); /* Color de los enlaces */
     text-decoration: none;
 }
 
