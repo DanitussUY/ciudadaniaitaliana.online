@@ -1,27 +1,31 @@
 /* basic.css */
+/* ROOT */
 :root {
-    --primary-color: #1A237E;
-    --secondary-color: #0066cc;
+    --primary-light-color: #fff;
+    --primary-dark-color: #1A237E;
+    --secondary-light-color: #0066cc;
     --comment-color:#f3f2ff;
-    --text-color: #333;
-    --text-color-light: #fff;
-    --background-color: #fff;
+    --text-dark-color: #333;
+    --background-light-color: #fff;
+    --background-dark-color: #1A237E;
+    --background-gray-color: #333;
     --font-family: Arial, sans-serif;
     --font-size: 16px;
 }
-
+/* BODY */
 body {
     font-family: var(--font-family);
-    color: var(--text-color);
-    background-color: var(--background-color);
+    color: var(--text-dark-color-color);
+    background-color: var(--background-light-color-color);
     line-height: 1.6;
 }
-
+/*  ALL HEADER */
+/* HEADER */
 header {
-    background-color: var(--primary-color);
-    color: var(--background-color);
+    background-color: var(--primary-dark-color);
+    color: var(--primary-light-color);
 }
-
+/* NAV */
 nav {
     display: flex;
     justify-content: space-between;
@@ -34,12 +38,12 @@ nav {
     border-bottom: 5px solid transparent; /* Define el tamaño del borde */
     border-image: url('/imagenes/border-footer.webp') 30 round; /* Ruta de la imagen, ancho de las secciones y modo de ajuste */
 }
-
+/* LOGO */
 .logo {
     font-size: 22px;
     font-weight: bold;
 }
-
+/* HERO */
 .hero {
     height: 100dvh;
     display: flex;
@@ -51,7 +55,7 @@ nav {
     position: relative; /* Para que el pseudo-elemento se posicione correctamente */
     align-items: center;
 }
-
+/* HERO::BEFORE */
 .hero::before {
     content: ''; /* Necesario para mostrar el pseudo-elemento */
     position: absolute; /* Posiciona el overlay sobre el contenido */
@@ -59,61 +63,68 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Negro con 50% de opacidad */
+    background-color: rgba(0, 0, 0, 0.7); /* Negro con 50% de opacidad */
     transition: background-color 0.5s ease; /* Transición suave del color de fondo */
     z-index: 1; /* Asegura que el overlay esté encima de la imagen */
 }
-
+/* HERO DARK MODE */
 .hero.dark-overlay::before {
     background-color: rgba(0, 0, 0, 0.93); /* Negro completamente opaco */
     backdrop-filter: blur(8px); /* Aplica desenfoque al fondo */
 }
-
+/* HERO CONTENT */
 .hero-content {
     position: relative; /* Asegura que el contenido esté encima del overlay */
     z-index: 2; /* Asegura que el contenido esté encima del overlay */
-    color: var(--text-color-light); /* Color del texto para contraste */
+    color: var(--primary-light-color); /* Color del texto para contraste */
     padding: 1em;
     margin-top: 5em;
 }
-
+/* HERO h1 */
 .hero-content h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
-
+/* HERO P */
 .hero-content p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
 }
-
+/* DOWN INDICATOR */
 .scroll-indicator {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
 }
-
+/* IMG FOR DOWN INDICATOR */
 .scroll-indicator img {
     width: 70px;
     animation: bounce 5s infinite;
 }
-
+/* MAIN */
 main {
     padding: 2rem;
 }
-
+/* H1 */
 h1 {
     font-size: 2.5rem;
     font-weight: bold;
 }
-
+/* H2 */
 h2 {
     font-size: 2rem;
 }
-
+/* CLASS */
+.main {
+    display: flex;
+    flex-direction: column; /* Por defecto, en móviles la imagen está arriba */
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 2em; /* Opcional: Espaciado interno para la sección */
+}
 .h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 .ch1 {
@@ -121,7 +132,7 @@ h2 {
     margin-bottom: 1rem;
     font-weight: bold;
 }
-
+/* KEYFRAMES FOR ANIMATIONS */
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -133,50 +144,4 @@ h2 {
         transform: translateY(-5px);
     }
 }
-/* Estilos generales del footer */
-/* Estilos generales del footer */
-footer {
-    background-color: var(--primary-color); /* Color de fondo */
-    color: var(--text-color-light); /* Color de texto */
-    padding: 20px 0;
-    border-top: 5px solid transparent; /* Define el tamaño del borde */
-    border-image: url('/imagenes/border-footer.webp') 30 round; /* Ruta de la imagen, ancho de las secciones y modo de ajuste */
-}
-
-.footer-container {
-    max-width: 1024px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Permite que las secciones se reorganicen en pantallas más pequeñas */
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 200px; /* Asegura que las secciones no se reduzcan demasiado */
-    margin: 10px 20px;
-}
-
-.footer-section h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    border-bottom: 5px solid var(--text-color-light); /* Línea debajo del título */
-    padding-bottom: 5px;
-}
-
-.footer-section p {
-    font-size: 1rem;
-    margin: 5px 0;
-}
-
-.footer-section a {
-    color: var(--comment-color); /* Color de los enlaces */
-    text-decoration: none;
-}
-
-.footer-section a:hover {
-    text-decoration: underline;
-}
-
-
 

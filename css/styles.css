@@ -1,4 +1,5 @@
 /* styles.css */
+/* CLASS */
 .hero {
     background-image: url(../imagenes/header-home.webp);
     background-size: cover;
@@ -14,8 +15,7 @@
     position: relative; /* Para que el pseudo-elemento se posicione correctamente */
     align-items: center;
 }
-
-/* Estilos generales para content-section */
+/* CONTENT SECTION*/
 .content-section {
     display: flex;
     flex-direction: column; /* Por defecto, en móviles la imagen está arriba */
@@ -23,8 +23,7 @@
     margin-bottom: 3rem;
     padding: 0; /* Opcional: Espaciado interno para la sección */
 }
-
-/* Imagen */
+/* SECTION IMG */
 .section-image img {
     width: 100%;
     height: auto;
@@ -33,40 +32,154 @@
     border-top: 5px solid transparent; /* Define el tamaño del borde */
     border-image: url('/imagenes/border-footer.webp') 30 round; /* Ruta de la imagen, ancho de las secciones y modo de ajuste */
 }
-
-/* Contenido */
+/* ALL SECTION */
 .section {
     text-align: left;
     padding: 2em;
     margin-bottom: 2rem;
 }
-
+/* SECTION CONTENT */
 .section-content {
     text-align: left;
     padding: 2em;
 }
-
+/* SECTION CONTENT H2 */
 .section-content h2 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
 }
-
+/* SECTION CONTENT P */
 .section-content p {
     font-size: 1rem;
     margin-bottom: 1.5rem;
 }
-
+/* SECTION CONTENT BUTTON */
 .section-content .btn {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color: var(--background-dark-color);
+    color: var(--primary-light-color);
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
-
+/* SECTION CONTENT BUTTON:HOVER */
 .section-content .btn:hover {
-    background-color: var(--text-color);
+    background-color: var(--background-gray-color);
+}
+/* STYLE FOR POP-UP EVENT JS */
+/* Estilizar la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento vertical */
+    height: 8px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+/* Estilizar el fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color del fondo de la pista de la barra de desplazamiento */
+}
+
+/* Estilizar el "pulgar" de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color del "pulgar" de la barra de desplazamiento */
+    border-radius: 10px; /* Radio de borde para el "pulgar" */
+}
+
+/* Estilizar el "pulgar" de la barra de desplazamiento cuando se pasa el ratón */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color del "pulgar" cuando se pasa el ratón */
+}
+/* Estilo del body cuando el pop-up está activo */
+body.no-scroll {
+    overflow: hidden; /* Oculta el desplazamiento de la página principal */
+}
+
+/* Contenedor del Pop-up */
+.content-popup {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transición de 0.3s */
+    opacity: 0;
+    transform: scale(0.9); /* Pequeño escalado inicial */
+}
+
+/* Contenido del Pop-up */
+.popup-content {
+    background-color: #fff;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh; /* Limita la altura del contenido para evitar que se desborde */
+    overflow-y: auto; /* Permite el desplazamiento interno del contenido */
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transición de 0.3s */
+}
+
+/* Botón de cierre */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: var(--primary-dark-color);
+}
+
+.content-popup.show {
+    display: flex;
+    opacity: 1;
+    transform: scale(1); /* Escalado normal al mostrar */
+}
+
+.popup-content.hide {
+    opacity: 0;
+    transform: scale(0.9); /* Pequeño escalado al ocultar */
+}
+/* PADDING */
+.paddingpop h1, .paddingpop h2 {
+    padding: 1em 0.5em 0 0.5em;
+}
+
+.paddingpop p {
+    padding: 1em;
+}
+/* COOKIES */
+/* Estilos para la imagen de la cookie fija */
+.cookie-svg {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999999;
+}
+
+.cookie-svg.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cookie-svg img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: var(--background-light-color);
+    border-radius: 0.25em;
 }
 

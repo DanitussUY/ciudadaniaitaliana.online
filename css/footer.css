@@ -1,0 +1,56 @@
+/* Estilos generales del footer */
+/* ID */
+footer {
+    background-color: var(--primary-dark-color); /* Color de fondo */
+    color: var(--primary-light-color); /* Color de texto */
+    padding: 20px 0;
+    border-top: 5px solid transparent; /* Define el tamaño del borde */
+    border-image: url('/imagenes/border-footer.webp') 30 round; /* Ruta de la imagen, ancho de las secciones y modo de ajuste */
+}
+footer nav {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    background: inherit;
+    position:relative;
+    z-index: 999;
+    border-bottom: none; /* Define el tamaño del borde */
+}
+/* CLASS */
+/* CONTAINER */
+.footer-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que las secciones se reorganicen en pantallas más pequeñas */
+}
+/* FOOTER SECTION */
+.footer-section {
+    flex: 1;
+    min-width: 200px; /* Asegura que las secciones no se reduzcan demasiado */
+    margin: 10px 20px;
+}
+/* FOOTER SECTION H3 */
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    border-bottom: 5px solid var(--primary-light-color); /* Línea debajo del título */
+    padding-bottom: 5px;
+}
+/* FOOTER SECTION P */
+.footer-section p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+/* FOOTER SECTION ANCHOR */
+.footer-section a {
+    color: var(--comment-color); /* Color de los enlaces */
+    text-decoration: none;
+}
+/* FOOTER SECTION ANCHOR:HOVER */
+.footer-section a:hover {
+    text-decoration: underline;
+}
